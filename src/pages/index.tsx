@@ -107,7 +107,7 @@ const Main = () => {
         </form>
       </div>
 
-      <div className="grid md:grid-cols-2 my-3 lg:grid-cols-3 gap-1">
+      <div className="grid grid-cols-2 my-3 lg:grid-cols-3 gap-1">
         <>
           {items?.map((item) => (
             <Card
