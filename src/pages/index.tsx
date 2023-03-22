@@ -17,7 +17,8 @@ const Main = () => {
           "fixed",
           "top-[3rem]",
           "left-0",
-          "px-[3rem]"
+          "px-[3rem]",
+          "z-[99]"
         );
       } else {
         inputRef.current.classList.remove(
@@ -88,7 +89,7 @@ const Main = () => {
           >
             <input
               value={prompt}
-              className="flex-1 shadow-lg p-2  md:rounded-l"
+              className="flex-1 shadow-lg p-2  md:rounded-l z-50"
               onChange={(e) => setPrompt(e.target.value)}
               placeholder="A cow crossing the road at times square"
             />
