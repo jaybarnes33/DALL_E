@@ -72,7 +72,7 @@ const index = () => {
   return (
     <div className="flex flex-col bg-neutral-100  px-[1rem] md:px-[3rem] justify-center min-h-screen">
       <Head>
-        <title>Dalle Image Generator</title>
+        <title>DALL-E Image Generator</title>
       </Head>
       <div className="min-h-[40vh] flex flex-col justify-center">
         <div className="flex text-slate-800 gap-3 items-center my-4 ">
@@ -94,9 +94,9 @@ const index = () => {
             />
             <button
               disabled={loading}
-              className="shadow-lg bg-white p-2  md:rounded-r text-gray-600 font-bold flex gap-2 items-center"
+              className="shadow-lg bg-white p-2  md:rounded-r text-gray-600 font-bold flex gap-2 items-center hover:bg-neutral-800 hover:text-white"
             >
-              Generate {loading && <Loader />}
+              {loading ? <Loader /> : "Generate"}
             </button>
           </div>
 
@@ -122,7 +122,7 @@ const index = () => {
                   className="w-full max-h-[450px]"
                 />
               }
-              back={<p className="text-center">{item.text}</p>}
+              back={<p className="font-serif">{item.text}</p>}
             />
           ))}
         </>
