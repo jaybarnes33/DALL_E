@@ -13,20 +13,6 @@ const Card = ({ item }: { item: { url: string; text: string } }) => {
     back?.classList.toggle("flex");
   };
 
-  const handleDownload = (url: string) => {
-    try {
-      const link = document.createElement("a");
-      link.download = "image.png";
-      link.target = "_blank";
-      link.relList.add("noreferrer", "noopener");
-      link.href = url;
-      link.click();
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoading(false);
-    }
-  };
   return (
     <div className="relative w-full max-h-[450px] text-gray-800">
       <Link href={item.url} download target="_blank" rel="noreferrer noopener">

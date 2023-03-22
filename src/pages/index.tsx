@@ -115,7 +115,7 @@ const Main = () => {
       <div className="grid grid-cols-2 my-3 lg:grid-cols-3 gap-1">
         <>
           {items?.map((item) => (
-            <Card item={item} />
+            <Card item={item} key={item.url} />
           ))}
         </>
       </div>
