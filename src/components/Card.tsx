@@ -15,14 +15,8 @@ const Card = ({
     let back = backRef.current;
     front?.classList.toggle("z-0");
     back?.classList.toggle("hidden");
-    back?.classList.add(
-      "absolute",
-
-      "flex",
-      "top-0",
-
-      "justify-between"
-    );
+    back?.classList.toggle("absolute");
+    back?.classList.toggle("flex");
   };
   return (
     <div
@@ -35,11 +29,11 @@ const Card = ({
       </div>
       <div
         ref={backRef}
-        className="hidden px-5  z-50 bg-[#f4f4f4f6] w-full h-full flex-col py-[3rem]"
+        className="hidden px-5  z-50 bg-[#f4f4f4f6] w-full h-full flex-col py-[3rem] top-0 justify-between"
       >
         {back}
 
-        <p className="text-gray-500">Click to try</p>
+        {/* <p className="text-gray-500">Click to try</p> */}
       </div>
     </div>
   );
