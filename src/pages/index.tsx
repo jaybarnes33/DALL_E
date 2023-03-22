@@ -115,20 +115,7 @@ const Main = () => {
       <div className="grid grid-cols-2 my-3 lg:grid-cols-3 gap-1">
         <>
           {items?.map((item) => (
-            <Card
-              key={item.url}
-              front={
-                <Image
-                  loading="lazy"
-                  src={item.url}
-                  alt={item.text}
-                  width={300}
-                  height={300}
-                  className="w-full max-h-[450px]"
-                />
-              }
-              back={<p className="font-serif">{item.text}</p>}
-            />
+            <Card item={item} />
           ))}
         </>
       </div>

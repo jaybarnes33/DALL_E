@@ -14,7 +14,7 @@ export default async function handler(
       const openai = await openAiConnect();
       const { data } = await openai.createImage({
         prompt: req.body.prompt,
-        n: 3,
+        n: 1,
         size: "512x512",
       });
       res.status(200).json({ images: data });
