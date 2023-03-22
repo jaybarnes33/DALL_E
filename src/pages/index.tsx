@@ -4,6 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Loader from "@/components/Loader";
 import Card from "@/components/Card";
+
 const Main = () => {
   const [prompt, setPrompt] = useState("");
   const [items, setItems] = useState<{ url: string; text: string }[]>([]);
