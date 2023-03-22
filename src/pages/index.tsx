@@ -17,7 +17,8 @@ const Main = () => {
           "fixed",
           "top-[3rem]",
           "left-0",
-          "px-[3rem]",
+          "px-[1rem]",
+          "md:px-[3rem]",
           "z-[99]"
         );
       } else {
@@ -25,7 +26,8 @@ const Main = () => {
           "fixed",
           "top-[3rem]",
           "left-0",
-          "px-[3rem]"
+          "px-[1rem]",
+          "md:px-[3rem]"
         );
       }
     }
@@ -87,10 +89,11 @@ const Main = () => {
             ref={inputRef}
             className="flex w-full flex-col md:flex-row gap-3 md:gap-0 justify-center"
           >
-            <input
+            <textarea
               value={prompt}
               className="flex-1 shadow-lg p-2  md:rounded-l z-50"
               onChange={(e) => setPrompt(e.target.value)}
+              rows={2}
               placeholder="A cow crossing the road at times square"
             />
             <button
