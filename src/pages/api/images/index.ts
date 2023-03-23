@@ -11,8 +11,8 @@ function uploadFilesToS3(data: ImagesResponse) {
   const aS3 = new S3({
     region: "us-east-1",
     credentials: {
-      accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
-      secretAccessKey: process.env.AWS_ACCESS_KEY!,
+      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+      secretAccessKey: process.env.AWS_KEY,
     },
   });
 

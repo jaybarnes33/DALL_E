@@ -4,6 +4,8 @@ declare global {
       OPEN_AI_API_KEY: string;
       NODE_ENV: "development" | "production";
       BUCKET: string;
+      AWS_KEY: string;
+      AWS_ACCESS_KEY_ID: string;
     }
   }
 }
