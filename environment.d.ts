@@ -3,6 +3,7 @@ declare global {
     interface ProcessEnv {
       OPEN_AI_API_KEY: string;
       NODE_ENV: "development" | "production";
+      BUCKET: string;
     }
   }
 }

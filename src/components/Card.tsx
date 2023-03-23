@@ -15,7 +15,7 @@ const Card = ({ item }: { item: { url: string; text: string } }) => {
 
   return (
     <div className="relative w-full max-h-[450px] text-gray-800">
-      <Link href={item.url} download target="_blank" rel="noreferrer noopener">
+      <Link href={item.url} download="image.png">
         <span className="h-10 cursor-pointer w-10 rounded-full flex items-center justify-center bg-white absolute -right-2 -top-5 z-[90]">
           &darr;
         </span>
