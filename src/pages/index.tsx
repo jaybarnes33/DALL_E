@@ -43,7 +43,7 @@ const Main = () => {
   }, []);
   useEffect(() => {
     const imagesFromStorage =
-      JSON.parse(localStorage.getItem("images") as string) || [];
+      JSON.parse(localStorage.getItem("data") as string) || [];
     setItems(imagesFromStorage);
   }, []);
 
@@ -52,19 +52,16 @@ const Main = () => {
     try {
       setLoading(true);
       const {
-        data: {
-          images: { data },
-        },
+        data: { images: data },
       } = await axios.post("/api/images", { prompt });
-      let imagesFromStorage =
-        JSON.parse(localStorage.getItem("images") as string) || [];
-      const restructuredData = data.map((item: { url: string }) => {
-        return { url: item.url, text: prompt };
-      });
-      imagesFromStorage = [...restructuredData, ...imagesFromStorage];
 
-      localStorage.setItem("images", JSON.stringify(imagesFromStorage));
-      setItems([...restructuredData, ...items]);
+      let imagesFromStorage =
+        JSON.parse(localStorage.getItem("data") as string) || [];
+
+      imagesFromStorage = [...data, ...imagesFromStorage];
+
+      localStorage.setItem("data", JSON.stringify(imagesFromStorage));
+      setItems([...data, ...items]);
       setPrompt("");
     } catch (error) {
       console.log(error);
